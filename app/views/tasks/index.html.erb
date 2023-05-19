@@ -1,0 +1,26 @@
+<div class="bg-white">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice">
+      <%= notice %>
+    </p>
+  <% end %>
+  <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+    <h1 class="font-bold text-2xl">Task Manager</h1>
+    <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+      <p class="mt-6 text-lg leading-8 text-gray-300">
+        <%= render "form", task: @task %>
+      </p>
+      <div class="mt-3 flex items-center lg:justify-start">
+        <div id="tasks">
+          <h1 class="font-bold text-lg mb-7">Tasks</h1>
+
+          <div class="px-5" data-controller="tasks">
+            <%= render @tasks %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
